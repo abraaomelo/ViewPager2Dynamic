@@ -11,6 +11,7 @@ public class ViewpagerFragment extends Fragment{
 
     TextView textView;
 
+    //We set the UI of our dynamic fragments
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){

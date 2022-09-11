@@ -1,3 +1,5 @@
+//This class is used to create the dot indicator of the viewPager
+
 package com.example.viewpager2example;
 
 import android.app.Activity;
@@ -24,6 +26,7 @@ public class ViewPagerUtil {
         return instance;
     }
 
+//This function creates the dot indicator
     void setupIndicator(Activity activity, ViewPager2 viewPager2, LinearLayout pagerDots, int size){
         ivArrayDotsPager = new ImageView[size];
 
@@ -70,6 +73,8 @@ public class ViewPagerUtil {
         viewPager2.registerOnPageChangeCallback(onPageChangeCallback);
     }
 
+
+// This function handles the dot indicator when the back button is pressed
     void onBackPressed(final ViewPager2 viewPager2, final FragmentManager fragmentManager){
         viewPager2.setFocusableInTouchMode(true);
         viewPager2.requestFocus();

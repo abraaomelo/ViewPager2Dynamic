@@ -2,23 +2,35 @@ package com.example.viewpager2example;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private ViewPager2 viewPager;
     private LinearLayout pager_dots;
     private FragmentStateAdapter pagerAdapter;
-    private static final int NUM_PAGES=5;
-    private String [] fragmentData = {"A", "B", "C", "D", "E"};
+    private static final int NUM_PAGES=2;
+    //private String [] fragmentData = {"Med1", "Med2"};
+    List<String> fragmentData = new ArrayList<String>();
+    Button btn_frag;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btn_frag = findViewById(R.id.btn_fragment);
+
+        fragmentData.add("SAPHIRA");
+        fragmentData.add("RUBY");
 
         viewPager = findViewById(R.id.viewpager);
         pager_dots = findViewById(R.id.pager_dots);
