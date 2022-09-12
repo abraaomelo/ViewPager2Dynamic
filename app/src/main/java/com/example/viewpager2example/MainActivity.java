@@ -2,8 +2,11 @@ package com.example.viewpager2example;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
@@ -19,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int NUM_PAGES=2;
     //private String [] fragmentData = {"Med1", "Med2"};
     List<String> fragmentData = new ArrayList<String>();
-    Button btn_frag;
+    private Button btn_frag;
 
 
 
@@ -27,10 +30,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btn_frag = findViewById(R.id.btn_fragment);
+
+
+       // btn_frag.setText("Teste Set text butn");
+
+//        btn_frag.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(MainActivity.this, "Clicked Button", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         fragmentData.add("SAPHIRA");
         fragmentData.add("RUBY");
+        fragmentData.add("New");
+        fragmentData.add("New2");
+
+        
 
         viewPager = findViewById(R.id.viewpager);
         pager_dots = findViewById(R.id.pager_dots);

@@ -5,7 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewpagerFragment">
+    tools:context=".MainActivity">
+    <!--tools:context=".ViewpagerFragment"> -->
+
 
     <!-- TEXT VIEW TO DISPLAY THE LETTER ON THE FRAGMENT -->
     <TextView
@@ -20,14 +22,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_fragment"
+        android:id="@+id/btnview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:text="teste"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
